@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnFirst;
     Button btnSecond;
     Button btnFifth;
+    Button btnSixth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ConnectActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSixth = (Button) findViewById(R.id.btnSixth);
+        btnSixth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, PassingIntentsExercise.class);
                 startActivity(intent);
             }
         });
