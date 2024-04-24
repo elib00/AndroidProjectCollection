@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSecond;
     Button btnFifth;
     Button btnSixth;
+    Button btnSeventh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,5 +55,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSeventh = (Button) findViewById(R.id.btnSeventh);
+
+        btnSeventh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MenuExercise.class);
+                startActivity(intent);
+            }
+        });
     }
 }
